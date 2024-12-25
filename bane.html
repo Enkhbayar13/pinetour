@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .backg {
+        margin: 0;
+      }
+      .hero {
+        background-image: url(./HeroImage.png);
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+      }
+      .widd {
+        width: 1204px;
+      }
+      .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+      }
+      .aher {
+        display: flex;
+        gap: 50px;
+      }
+      .logo {
+        width: 120px;
+        height: 48px;
+      }
+      .font1 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .en {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50px;
+        border: 0px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .textcontainer1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 190px;
+        gap: 50px;
+      }
+      .pure {
+        font-size: 100px;
+        font-weight: 400;
+        color: rgba(232, 237, 242, 0.72);
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+      .awaits {
+        font-size: 300px;
+        font-weight: 500;
+        color: rgba(253, 253, 254, 0.98);
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+      .B024 {
+        font-size: 90px;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+      .page2 {
+        width: 100pw;
+        height: 33vh;
+        background-image: url(./Price&Footer\ Section.png);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        padding: 65px 119px;
+        position: relative;
+      }
+      .card {
+        width: 275px;
+        height: 370px;
+        position: relative;
+        background-image: url(./terh.png);
+        background-size: 100%;
+        border-radius: 40px;
+        box-shadow: -8px -8px rgba(31, 114, 170, 0.46),
+          8px 8px rgba(41, 114, 139, 0.25);
+      }
+      .card:hover .blackBack {
+        display: block;
+      }
+      .card2 {
+        width: 275px;
+        height: 370px;
+        position: relative;
+        background-image: url(./aglag.png);
+        background-size: 100%;
+        border-radius: 40px;
+        box-shadow: -8px -8px rgba(31, 114, 170, 0.46),
+          8px 8px rgba(41, 114, 139, 0.25);
+      }
+      .card2:hover .blackBack {
+        display: block;
+        border-radius: 40px;
+      }
+      .blackBack {
+        display: none;
+        background-color: rgb(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 40px;
+      }
+      .card3 {
+        width: 275px;
+        height: 370px;
+        position: relative;
+        background-image: url(./huvsgul.png);
+        background-size: 100%;
+        border-radius: 40px;
+        box-shadow: -8px -8px rgba(31, 114, 170, 0.46),
+          8px 8px rgba(41, 114, 139, 0.25);
+        display: flex;
+        justify-content: center;
+      }
+      .card3:hover .blackBack {
+        display: block;
+        border-radius: 40px;
+      }
+      .card4 {
+        width: 275px;
+        height: 370px;
+        position: relative;
+        background-image: url(./horgiin\ togoo.png);
+        background-size: 100%;
+        border-radius: 40px;
+        box-shadow: -8px -8px rgba(31, 114, 170, 0.46),
+          8px 8px rgba(41, 114, 139, 0.25);
+        display: flex;
+        justify-content: center;
+      }
+      .card4:hover .blackBack {
+        display: block;
+        border-radius: 40px;
+      }
+      .widdd {
+        width: 1204px;
+        display: flex;
+        gap: 40px;
+      }
+      .text {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 33px;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 400;
+        color: white;
+        top: 35%;
+        position: absolute;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .des {
+        color: #000;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 600;
+        font-style: normal;
+      }
+      .pack {
+        font-size: 20px;
+        color: rgba(24, 24, 27, 0.7);
+        font-weight: 500;
+        font-style: normal;
+      }
+      .page3 {
+        height: 100vh;
+        width: 100vw;
+        background-image: url(./Map\ Image.png);
+      }
+      .tolgoi {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
+      .icon {
+        height: 14px;
+        width: 14px;
+      }
+      .box3 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 483px;
+        height: 52px;
+        background-color: #eee9d9;
+        padding: 30px 30px 30px 30px;
+        border-radius: 120px;
+        position: relative;
+      }
+      .suhbaatar {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      .day {
+        width: 52px;
+        height: 52px;
+        border-radius: 50px;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .leftcontainer {
+        display: flex;
+        flex-direction: row;
+        width: 1204px;
+        height: 800px;
+        position: relative;
+        top: 80px;
+      }
+      .box4 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 483px;
+        height: 52px;
+        background: rgba(139, 184, 193, 0.8);
+        padding: 30px 30px 30px 30px;
+        border-radius: 120px;
+      }
+      .box5 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 483px;
+        height: 52px;
+        background: rgba(170, 216, 215, 0.8);
+        padding: 30px 30px 30px 30px;
+        border-radius: 120px;
+      }
+      .box6 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 483px;
+        height: 52px;
+        padding: 30px 30px 30px 30px;
+        border-radius: 120px;
+        background: rgba(139, 192, 189, 0.8);
+      }
+      .box7 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 483px;
+        height: 52px;
+        padding: 30px 30px 30px 30px;
+        border-radius: 120px;
+        background: rgba(151, 204, 224, 0.8);
+      }
+      .frame {
+        width: 1200px;
+        height: 640px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: auto;
+      }
+      .hen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 14%;
+      }
+      .terh-posi {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        left: 650px;
+        top: 180px;
+        display: none;
+      }
+      .box6:hover ~ .terh-posi {
+        display: block;
+        border: 5px solid white;
+      }
+      .aglag-posi {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        left: 800px;
+        top: 120px;
+        display: none;
+        position: absolute;
+      }
+      .box4:hover ~ .aglag-posi {
+        display: block;
+      }
+      .horgo-posi {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        left: 700px;
+        top: 200px;
+        display: none;
+      }
+      .box5:hover ~ .horgo-posi {
+        display: block;
+      }
+      .huvsgul-posi {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        left: 950px;
+        top: 400px;
+        display: none;
+      }
+      .box7:hover ~ .huvsgul-posi {
+        display: block;
+      }
+      .svh-posi {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        left: 900px;
+        top: 200px;
+        display: none;
+      }
+      .box3:hover ~ .svh-posi {
+        display: block;
+      }
+      .columns {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .box4:hover {
+        border: 3px solid white;
+      }
+      .box3:hover {
+        border: 3px solid white;
+      }
+      .box5:hover {
+        border: 3px solid white;
+      }
+      .box6:hover {
+        border: 3px solid white;
+      }
+      .box7:hover {
+        border: 3px solid white;
+      }
+      .page4 {
+        background-image: url(./Price&Footer\ Section.png);
+        width: 100vw;
+        height: 100vh;
+        background-size: 100%;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bane</title>
+  </head>
+  <body class="backg">
+    <div class="hero">
+      <div class="widd">
+        <section class="navigation">
+          <img class="logo" src="logo.png" alt="" />
+          <div class="aher font1">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <img src="./user.svg" alt="" />
+          </div>
+          <button class="en">EN</button>
+        </section>
+        <section class="textcontainer1">
+          <article class="pure">PURE MAGIC</article>
+          <article class="awaits">AWAITS!</article>
+          <article class="B024">2024</article>
+        </section>
+      </div>
+    </div>
+    <div class="page2">
+      <section class="widdd">
+        <article class="card">
+          <div class="text">terkhiin tsagaan lake</div>
+          <div class="blackBack"></div>
+        </article>
+        <articler class="card2">
+          <div class="text">amarbayasgalant monastery</div>
+          <div class="blackBack"></div>
+        </articler>
+        <article class="card3">
+          <div class="text">khuvsgul lake</div>
+          <div class="blackBack"></div>
+        </article>
+        <article class="card4">
+          <div class="text">khorgiin togoo</div>
+          <div class="blackBack"></div>
+        </article>
+      </section>
+    </div>
+    <div class="page3">
+      <header class="hen">
+        <section class="widd">
+          <article class="tolgoi header">
+            <div class="des">Destinalation of Our Agency</div>
+            <div class="pack">Pack Your Bags And Get Ready</div>
+          </article>
+        </section>
+
+        <div>
+          <section class="leftcontainer">
+            <div class="columns">
+              <div class="box3">
+                <span>
+                  <div class="suhbaatar">Sukhbaatar square</div>
+                  <img
+                    class="icon"
+                    src="./Icon tseg.png"
+                    alt="icon"
+                  />Ulaanbator
+                </span>
+                <div class="day">DAY 1</div>
+              </div>
+              <img class="svh-posi" src="./Frame 176.png" alt="" />
+              <div class="box4">
+                <span>
+                  <div class="suhbaatar">Amarbaysgalant manastery</div>
+                  <img class="icon" src="./Icon tseg.png" alt="" />Bulgan
+                </span>
+                <div class="day">DAY 2</div>
+              </div>
+              <img class="aglag-posi" src="./aglag.png" alt="" />
+              <div class="box5">
+                <span>
+                  <div class="suhbaatar">Khorgiin togoo</div>
+                  <img class="icon" src="./Icon tseg.png" alt="icon" />Arkhangai
+                </span>
+                <div class="day">DAY 3</div>
+              </div>
+              <img class="horgo-posi" src="./horgiin togoo.png" alt="" />
+              <div class="box6">
+                <span>
+                  <div class="suhbaatar">Terkhinn tsagaan lake</div>
+                  <img class="icon" src="./Icon tseg.png" alt="icon" />Arkhangai
+                </span>
+                <div class="day">DAY 4</div>
+              </div>
+              <img class="terh-posi" src="./terh.png" alt="" />
+              <div class="box7">
+                <span>
+                  <div class="suhbaatar">Khuvsgul lake</div>
+                  <img class="icon" src="./Icon tseg.png" alt="icon" />Khuvsgul
+                </span>
+                <div class="day">DAY 5</div>
+              </div>
+              <img class="huvsgul-posi" src="khuvsgul.png" alt="" />
+            </div>
+          </section>
+        </div>
+      </header>
+    </div>
+    <div class="page4"></div>
+  </body>
+</html>
