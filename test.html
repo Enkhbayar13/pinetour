@@ -7,120 +7,110 @@
   </head>
   <body>
     <!DOCTYPE html>
-    <html lang="en">
+    <html>
       <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hanuman:wght@100;300;400;700;900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <title>Document</title>
+        <meta charset="utf-8" />
+        <title>Image Slider</title>
+        <style>
+          body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .slider {
+            width: 800px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          .imgs_slides {
+            width: 500%;
+            height: 500px;
+            display: flex;
+          }
+          .imgs_slides input {
+            display: none;
+          }
+          .slide {
+            width: 20%;
+            transition: 2s;
+          }
+          .slide img {
+            width: 800px;
+            height: 500px;
+          }
+          .navigation {
+            position: absolute;
+            width: 800px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+          }
+          .navigation-btn {
+            border: 2px solid #de6a23;
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+          }
+          .navigation-btn:not(:last-child) {
+            margin-right: 40px;
+          }
+          .navigation-btn:hover {
+            background: #de6a23;
+          }
+          #radio1:checked ~ .navigation label[for="radio1"],
+          #radio2:checked ~ .navigation label[for="radio2"],
+          #radio3:checked ~ .navigation label[for="radio3"] {
+            background: #de6a23;
+          }
+          #radio1:checked ~ .first {
+            margin-left: 0;
+          }
+          #radio2:checked ~ .first {
+            margin-left: -20%;
+          }
+          #radio3:checked ~ .first {
+            margin-left: -40%;
+          }
+          #radio1:checked ~ .navigation label[for="radio1"],
+          #radio2:checked ~ .navigation label[for="radio2"],
+          #radio3:checked ~ .navigation label[for="radio3"] {
+            background: #de6a23;
+          }
+        </style>
       </head>
       <body>
-        <!-- <section class="section-one">      <div class="card">        <img          width="275.49px"          height="370px"          src="./images/image.png"          alt="card-image" />        <p>Terkhiin tsagaan lake</p>      </div>      <div class="card">        <img          width="275.49px"          height="370px"          src="./images/card-image.png"          alt="card-image" />        <p>Amarbayasgalant Monastery</p>      </div>      <div class="card">        <img          width="275.49px"          height="370px"          src="./images/card-image.png"          alt="card-image" />        <p>Amarbayasgalant Monastery</p>      </div>      <div class="card">        <img          width="275.49px"          height="370px"          src="./images/card-image.png"          alt="card-image" />        <p>Amarbayasgalant Monastery</p>      </div>    </section> -->
-        <section>
-          <h1>hello</h1>
-          <p>this is desc</p>
-          <div style="display: flex; position: relative">
-            <div
-              style="
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-                min-width: 513px;
-              "
-            >
-              <div class="destination-place">
-                <div class="location-info">
-                  <h3>Sukhbaatar square</h3>
-                  <div class="region">
-                    <img
-                      width="14px"
-                      height="14px"
-                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
-                      alt="pin"
-                    />
-                    <p>Ulaanbaatar</p>
-                  </div>
-                </div>
-                <div class="day">day1</div>
-              </div>
-              <div class="destination-place">
-                <div class="location-info">
-                  <h3>Sukhbaatar square</h3>
-                  <div class="region">
-                    <img
-                      width="14px"
-                      height="14px"
-                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
-                      alt="pin"
-                    />
-                    <p>Ulaanbaatar</p>
-                  </div>
-                </div>
-                <div class="day">day1</div>
-              </div>
-              <div class="destination-place">
-                <div class="location-info">
-                  <h3>Sukhbaatar square</h3>
-                  <div class="region">
-                    <img
-                      width="14px"
-                      height="14px"
-                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
-                      alt="pin"
-                    />
-                    <p>Ulaanbaatar</p>
-                  </div>
-                </div>
-                <div class="day">day1</div>
-              </div>
-              <div class="destination-place day-four">
-                <div class="location-info">
-                  <h3>Sukhbaatar square</h3>
-                  <div class="region">
-                    <img
-                      width="14px"
-                      height="14px"
-                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
-                      alt="pin"
-                    />
-                    <p>Ulaanbaatar</p>
-                  </div>
-                </div>
-                <div class="day">day1</div>
-              </div>
-              <div class="destination-place">
-                <div class="location-info">
-                  <h3>Sukhbaatar square</h3>
-                  <div class="region">
-                    <img
-                      width="14px"
-                      height="14px"
-                      src="https://s3-alpha-sig.figma.com/img/2b3c/3cca/10eb305e9f9d16a5f0da676c47239ec4?Expires=1735516800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FJg2VNH7v-nIvItJYfQGoxhzdoWQ4XJ4F9c4EnA~gJoqGkObFvU4UD8X2Qube2dwaADP82cEjvDv8JSCI7IN2ktidoZyZ6weFqv-segie4wTguxGrnnUE2jojYljbAtAKPCNT1pW-LFpxDqZilYnQT9p-BeF0~af8QRsXvaevZokHo8~6uSxNcUI5noBtgR7pPr3RL9uWSE7rFp7k42WDp7d2~HyO4h8FV--sJNlqcrnvurfGs67Rf05CAvwbFNaX4FE3FRkKX8yvBB5~rnBRHRyKpMJiwtHVgmUryJl-PLSTPa9MmsOiB1urW~nH~rEEWsnMfkSVQUQPpX4RHK0XQ__"
-                      alt="pin"
-                    />
-                    <p>Ulaanbaatar</p>
-                  </div>
-                </div>
-                <div class="day">day1</div>
-              </div>
+        <div class="slider">
+          <div class="imgs_slides">
+            <input type="radio" name="radio-btn" id="radio1" />
+            <input type="radio" name="radio-btn" id="radio2" />
+            <input type="radio" name="radio-btn" id="radio3" />
+            <div class="first slide">
               <img
-                class="hover-image"
-                style="position: absolute; top: 0; right: 0; display: none"
-                src="./images/Background.png"
-                alt="bg"
-                width="200px"
-                height="200px"
+                src="https://s3-alpha-sig.figma.com/img/0ef2/0c45/6c1f9e35f8cfc952ddd2340d8debbb86?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NZJney3NWLJC~G1S9lJ5d60Fs0xfmGy-T0zoxamNyO6AmTg1cMRX6lvPoFaowrPRhYlna9z3ZHGCwwvg4~gzeOUzozwZNMRYQV7mCp3c7ljvcULJnngQHOSZvaNDMHfLzto-AmlWGzOtHXDXCWMUJ5SG1SalbzowePZD0q6GWuA9iLqI1pEw2RiPiEi6Bv1wBsJxp60hocx-CX8X~mzyMHFoxoDrp9kFD049poB~zRBqanSGNYZYX4HIwCZBo1IFXKl5O-7XAGxWQ0Wq0MVhju-nlKWXrOC6rSlVuci18cLUNSOyi9zo3aTtffMEGaQxe00McyM~8C-jZZX9oaLV-g__"
               />
             </div>
-            <div class="width:100%"></div>
+            <div class="slide">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/a962/32d2/cffc7341eddba9393942d27673a1bb78?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Wa6ft32I8WbKGb2PP5uTJkcd7ugvcaWabsM0EnU7lMFFxMMDxt6BQRH-URUhsS3UVywTe~B3b8FgqiQIrOXLs9oh2XCnu8hd~MPGqEyVgskfdLPymNB3OFRgOV-k73o-iCnjv4WVXTo5506loL~J4gtYdW4OKNNeT78LsZ-aNG98sROkEYuQRu9H5iv5ejEkOVvAAdHhLzuk2tOIpk0kp1CAvdpi5wWtGWjpgPCzgtsx~i6qDY4XSxIoaOYd2EcDWPlLedNbV~gl1MES1yXQOmrsOtQ8N2PQsCGl0B4b5gMVzbdSx1Jhb9xf31JO0C7pmzJPRDj22z3znNIF-MXW6w__"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/a71f/a31c/036fa4ebdb97754279e6264a8511c26a?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lNUrVqR5kr11PQYKMp~hf1PSKn-RmraRnblczb5ZK44Zlle6q5C1y-gvVIw776SUgcSPrCR8KKYbP9Nu5XXLsG8wTdzQ4VRVYt~7p262DX4lRkXut-d-yENFOTjxb26fweq2D7m74Vet3KwpCq-~dcF4vaGf-rvv9RzelXFokKwEurPHBD6VwKH4RW5Jg-osHBoGWQzca~URh267TaimAhwxakxVMfJ8SbMUVJLbOGf-RfJxQBsjtqpd20M8KSDEzPz9XblbNEcgCkg2Pb3~7gqCaQJ4e5MGlEJRgjYwsJrORFuWCxe1I3BR9-XlvRNyZT5eBTOztTpFLpBltGAsQw__"
+              />
+            </div>
           </div>
-        </section>
+          <div class="navigation">
+            <label for="radio1" class="navigation-btn"> </label>
+            <label for="radio2" class="navigation-btn"> </label>
+            <label for="radio3" class="navigation-btn"> </label>
+          </div>
+        </div>
       </body>
     </html>
   </body>
